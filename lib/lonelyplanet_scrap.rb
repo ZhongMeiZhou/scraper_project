@@ -1,0 +1,3 @@
+module LonelyplanetScrap
+  # Your code goes here...
+end
