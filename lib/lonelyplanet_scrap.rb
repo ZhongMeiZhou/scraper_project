@@ -1,6 +1,5 @@
 require 'oga'
 require 'open-uri'
-require 'date'
 require 'json'
 
 # This module include all the classes that Get data from LonelyPlanet wesite
