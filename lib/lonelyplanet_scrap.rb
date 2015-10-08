@@ -3,41 +3,52 @@ require 'open-uri'
 require 'date'
 
 # This module include all the classes that Get data from LonelyPlanet wesite
-module LonelyplanetScrap
-  # This class gets the news from the website http://www.lonelyplanet.com/news/
-  class LonelyPlaneNews
+module LonelyPlanetScrape
+  # This class gets the news from the website http://www.lonelyplanet.com/taiwan/Tours
+  class LonelyPlanetTours
     # Main Constants
     # Please if the test for uri fails replace contant manually
     LONELYPLANET_URL = 'http://www.lonelyplanet.com'
-    NEWS_RELATIVE_DIR = 'news'
+    SIGHT_RELATIVE_DIR = 'taiwan/tours'
     
     # XPATH TO EXTRACT DATA
-    NEWS_XPATH_CARD = '//article[contains(@class,'post')]'
-    CARD_TITLE_XPATH = ''
-    CARD_CONTENT_XPATH = ''
-    CARD_LINK_XPATH = ''
-    CARD_CREATEDBY_XPATH = ''
-    CARD_DATE_XPATH = ''
+    TOUR_XPATH_CARD = '//article[contains(@class,'card')]'
+    CARD_IMGLINK_XPATH = '//img[contains(@class,'card__figure__img')'
+    CARD_TITLE_XPATH = 'h1'
+    CARD_CONTENT_XPATH = '//div[contains(@class,'card__content__desc')]//p'
+    CARD_LINK_XPATH = '//div[contains(@class,'card__mask')]//a'
+    CARD_LOCATION_XPATH = '//div[contains(@class,'card__footer__locale')]'
+    CARD_PRICE_CURRENCY_XPATH = '//span[contains(@class,'price-label__currency')]'
+    CARD_PRICE_AMOUNT_XPATH = '//span[contains(@class,'price-label__price')]'
+    
 
     def initialize
     	parse_html
     end
 
-    def news
-    	@news ||= extract_news
+    def tours
+    	@tours ||= extract_tours
     end
 
     def parse_html
-    	url = "#{LONELYPLANET_URL}/#{NEWS_RELATIVE_DIR}"
+    	url = "#{LONELYPLANET_URL}/#{SIGHT_RELATIVE_DIR}"
     	@document = Oga.parse_html(open(url))
     end
 
-    def extract_news
-
+    def extract_tours
+        result = []
+        element = {}
+        @document.xpath(TOUR_XPATH_CARD).map do |card|
+            element[:img] = card.xpath(CARD_IMGLINK_XPATH).text 
+            element[:title] = card.xpath(CARD_IMGLINK_XPATH).text
+            element[:content] = card.xpath(CARD_IMGLINK_XPATH).text
+            element[:location] = card.xpath(CARD_IMGLINK_XPATH).text
+            element[:price_currency] = card.xpath(CARD_IMGLINK_XPATH).text
+            element[:price] = card.xpath(CARD_IMGLINK_XPATH)
+            result << element
+        end
     end
-
-    def fetch
-    end
-
   end
 end
+
+
