@@ -1,8 +1,6 @@
-require_relative 'lonelyplanet_scrap'
+require_relative 'lonelyplanet_scrap.rb'
 # Testing functionalities
-class Tester
-  include LonelyPlanetScrape
-end
+include LonelyPlanetScrape
 
-test_run = Tester.new
-test_run.
+test_run = LonelyPlanetScrape::LonelyPlanetTours.new
+puts test_run.get_tours
