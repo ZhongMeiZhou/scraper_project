@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require 'json'
+require_relative '../lib/lonelyplanet_scrap'
+
+begin
+  taiwan_tours = LonelyPlanetScrape::LonelyPlanetTours.new
+  tour_arr = JSON.parse(taiwan_tours.get_tours)
+  puts "According to LonelyPlanet.com, these are the best tours in Taiwan:"
+
+  tour_arr.each do |hash|
+    puts "- #{hash['title']} for $#{hash['price']}"
+  end
+
+rescue => e
+  puts "Something went horribly wrong ;(. Error: #{e}."
+end
