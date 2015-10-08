@@ -2,10 +2,10 @@ require 'oga'
 require 'open-uri'
 require 'date'
 
-# This module include all the classes that Get data from LonelyPlanet wesite
+# This module include all the classes that get data from LonelyPlanet website
 module LonelyplanetScrap
   # This class gets the news from the website http://www.lonelyplanet.com/news/
-  class LonelyPlaneNews
+  class LonelyPlanetScrap
     # Main Constants
     # Please if the test for uri fails replace contant manually
     LONELYPLANET_URL = 'http://www.lonelyplanet.com'
@@ -33,6 +33,7 @@ module LonelyplanetScrap
     end
 
     def extract_news
+        
 
     end
 
