@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-# Gems required to run lonelyplanet_spec
+# Gems required
 gem 'oga'
+gem 'json'
+gem 'minitest'
