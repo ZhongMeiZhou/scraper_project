@@ -21,7 +21,7 @@ Please run `bin/taiwan_tours` for you to explore tour packages
 
 ## Testing
 
-Please run `ruby /spec/lonelyplanet_spec.rb` to run a series of tests on the returned results
+Please run `ruby spec/lonelyplanet_spec.rb` to run a series of tests on the returned results
 
 ## Want to make improvements?
 
