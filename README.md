@@ -1,7 +1,7 @@
 
 # LonelyPlanet Web Scraper Service
 
-The lonelyplanet web scraper service traverses for details about tour packages in Taiwan
+The lonelyplanet web scraper service traverses details of Taiwan tour packages
 
 ## Installation
 
@@ -19,6 +19,9 @@ Or install the gems yourself listed in the Gemfile:
 
 Please run `bin/taiwan_tours` for you to explore tour packages
 
+## Testing
+
+Please run `ruby /spec/lonelyplanet_spec.rb` to run a series of tests on the returned results
 
 ## Want to make improvements?
 
