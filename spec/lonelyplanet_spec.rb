@@ -1,11 +1,22 @@
 require 'minitest/autorun'
+#require 'minitest/rg'
 require 'yaml'
 require 'json'
+require 'vcr'
+require 'webmock/minitest'
 require './lib/lonelyplanet_scrap'
 
 tours_from_file = YAML.load(File.read('./spec/tours.yml'))
-data = LonelyPlanetScrape::LonelyPlanetTours.new.tours
-tours_found = JSON.parse(data)
+
+
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+end
+
+VCR.use_cassette('lonelyplanettours') do
+  data = LonelyPlanetScrape::LonelyPlanetTours.new.tours
+  tours_found = JSON.parse(data)
 
 describe 'Compare returned results against actual data' do
 
@@ -32,5 +43,5 @@ describe 'Compare returned results against actual data' do
       tours_from_file[index]['content'].must_equal tours_found[index]['content']
     end
   end
-  
+end
 end
