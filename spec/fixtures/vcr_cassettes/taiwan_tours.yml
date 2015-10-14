@@ -25,14 +25,14 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Etag:
-      - '"f69187a5f62b5b2fb827bce0d22964ff"'
+      - '"5ac9176da7243746c94665e4d98b3d92"'
       Server:
       - Powered by Sloths
       Set-Cookie:
       - _v=_split-12-canary;Path=/
       - localeCookie=en_TW; Domain=lonelyplanet.com; Path=/
       - lpCurrency=USD; Domain=lonelyplanet.com; Path=/
-      - lpUid=qt1ePoE6F3fsSC4RRA75Ty4ZRr31_Rlx; expires=Wed, 12 Oct 2016 15:01:01
+      - lpUid=gYjPIXiEPD0pgYZSPYKcnNYoGLD7ynHR; expires=Thu, 13 Oct 2016 14:27:04
         GMT; Domain=lonelyplanet.com; Path=/
       Status:
       - 200 OK
@@ -41,29 +41,29 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 3ee0c8b8-6b3c-4860-9720-262ae77be3fc
+      - 09c5daf5-5430-4849-8b92-bc1dad078641
       X-Runtime:
-      - '0.267120'
+      - '0.272656'
       X-Xss-Protection:
       - 1; mode=block
       Content-Length:
-      - '23893'
+      - '23894'
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 13 Oct 2015 15:01:01 GMT
+      - Wed, 14 Oct 2015 14:27:04 GMT
       Via:
       - 1.1 varnish
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-bma7026-BMA
+      - cache-bma7027-BMA
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       X-Timer:
-      - S1444748460.951450,VS0,VE411
+      - S1444832823.714585,VS0,VE553
       Vary:
       - Fastly-SSL, Accept-Encoding
       X-Geoip-Countrycode:
@@ -71,11 +71,11 @@ http_interactions:
       X-Geoip-Countryname:
       - Taiwan
       X-Geoip-City:
-      - Hsinchu
+      - Taipei
       X-Geoip-Longitude:
-      - '120.971'
+      - '121.525'
       X-Geoip-Latitude:
-      - '24.805'
+      - '25.039'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -126,7 +126,7 @@ http_interactions:
         OmRlc2NyaXB0aW9uJyAvPgo8bWV0YSBjb250ZW50PSdodHRwOi8vd3d3Lmxv
         bmVseXBsYW5ldC5jb20vdGFpd2FuL3RvdXJzJyBwcm9wZXJ0eT0nb2c6dXJs
         JyAvPgo8bWV0YSBjb250ZW50PSd3ZWJzaXRlJyBwcm9wZXJ0eT0nb2c6dHlw
-        ZScgLz4KCjxtZXRhIGNvbnRlbnQ9JzIwMTUtMTAtMDggMTk6MTQ6NTkgKzAw
+        ZScgLz4KCjxtZXRhIGNvbnRlbnQ9JzIwMTUtMTAtMTQgMTE6Mjc6MDQgKzAw
         MDAnIG5hbWU9J3NhaWx0aHJ1LmRhdGUnIC8+CjxtZXRhIGNvbnRlbnQ9J0Fz
         aWEsIFRhaXdhbiwgYWR2ZW50dXJlLXRyYXZlbCwgYXJjaGl0ZWN0dXJlLWFu
         ZC1idWlsZGluZ3MsIGJlYWNoZXMsIGJvYXRzLWFuZC1zYWlsaW5nLCBidXNp
@@ -148,8 +148,8 @@ http_interactions:
         JyB0eXBlPSdpbWFnZS94LWljb24nPgo8bWV0YSBjb250ZW50PSd3aWR0aD1k
         ZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MScgbmFtZT0ndmlld3BvcnQn
         Pgo8bWV0YSBjb250ZW50PSJhdXRoZW50aWNpdHlfdG9rZW4iIG5hbWU9ImNz
-        cmYtcGFyYW0iIC8+CjxtZXRhIGNvbnRlbnQ9InM2Q3hWeWNHdDRseW1vSHJL
-        OGtiS00vYjVHTzE1eE1CdzRaLzlNZDJZdWM9IiBuYW1lPSJjc3JmLXRva2Vu
+        cmYtcGFyYW0iIC8+CjxtZXRhIGNvbnRlbnQ9IjJzbHZRbkVDOEdKRktSczVP
+        Vm54bEhTVEt4eDBWQTBhVm5POC92NmZOQWc9IiBuYW1lPSJjc3JmLXRva2Vu
         IiAvPgo8IS0tW2lmIGx0IElFIDldPgo8c2NyaXB0PgogIGRvY3VtZW50LmNy
         ZWF0ZUVsZW1lbnQoJ2hlYWRlcicpOwogIGRvY3VtZW50LmNyZWF0ZUVsZW1l
         bnQoJ25hdicpOwogIGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NlY3Rpb24n
@@ -2569,8 +2569,8 @@ http_interactions:
         NzQ3NzY4MTk4NjI4Mjk5JmFtcDtldj1QaXhlbEluaXRpYWxpemVkIiAvPjwv
         bm9zY3JpcHQ+Cgo8L2Rpdj4KCjxkaXYgY2xhc3M9J3BvaW50ZXItY292ZXIn
         IGlkPSdqcy1wb2ludGVyLWNvdmVyJz48L2Rpdj4KCgo8IS0tCmJ1aWxkOiB3
-        YWxkb3JmLXByb2R1Y3Rpb24tY2FuYXJ5LTY2NGYzNGYyZmE3MTFkMDlkYjNm
-        MTFlYTZlMDI5ZWE2OGY3OWVhZmMKLS0+CjwvZGl2Pgo8L2JvZHk+Cg==
+        YWxkb3JmLXByb2R1Y3Rpb24tY2FuYXJ5LTY1OTJjZDA4MjllMTE1ZGQ5Nzhj
+        ZmI4NjhlYThjZjM3NGZkYTNmZDYKLS0+CjwvZGl2Pgo8L2JvZHk+Cg==
     http_version: 
-  recorded_at: Tue, 13 Oct 2015 15:01:02 GMT
+  recorded_at: Wed, 14 Oct 2015 14:22:00 GMT
 recorded_with: VCR 2.9.3
