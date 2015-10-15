@@ -42,9 +42,9 @@ Please run `ruby spec/lonelyplanet_spec.rb` to run a series of tests on the retu
 
  either, as our gem is published by Rubygems.org you can also include it in your 'Gemfile' as:
 
-
- $ gem ZMZTaiwanTours
-
+ ```ruby
+ gem ZMZTaiwanTours
+ ```
 
 ## Try it!
  Run it from the command line as follow:
