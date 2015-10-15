@@ -1,7 +1,51 @@
 
++# CodeBadges
+
++Codecademy is a great place to learn coding! Unfortunately, Codecademy's website
++doesn't provide an API to help us monitor our own coding.
++So we made the CodeBadges gem to scrape user achievements from Codecademy!
+
++Note that we respect Codecademy's `robots.txt`
+
+ ## Usage
+
+ Install it with the following command:
+-````ruby
+-gem install codebadges
+-````
++```
++$ gem install codebadges
++```
+
+-Then in your file:
++Or else put it in your `Gemfile` as:
++```ruby
++gem codebadges
++```
++
++Run it from the command line. For example, to get the achievements of user `chenlizhan`:
++```
++$ codebadges chenlizhan
++```
++
++Or use it from your Ruby code:
+ ````ruby
+ require "codebadges"
+-CodecademyBadges.get_badges(username)
+-````
+-The argument username is the user's account who you want to check it out!
++lee = CodeBadges::CodecademyBadges.new('chenlizhan')
++badges = lee.badges
+
+
+
+
 # LonelyPlanet Web Scraper Service [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
 
-The lonelyplanet web scraper service traverses details of Taiwan tour packages
+#ZMZ Taiwan Tours
+The lonelyplanet web scraper service traverses details of Taiwan tour packages in a easiest way and with simple steps.
+
+Our company entirely respect the privacy policies of our partner Lonelyplanet declare on 'robots.txt' file.
 
 ## Installation
 
