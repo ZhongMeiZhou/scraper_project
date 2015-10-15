@@ -4,3 +4,9 @@ source 'https://rubygems.org'
 gem 'oga'
 gem 'json'
 gem 'minitest'
+gem 'webmock'  
+gem 'vcr'
+
+group :setup do
+ gem 'rake'
+end
