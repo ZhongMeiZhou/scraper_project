@@ -46,7 +46,7 @@ Please run `ruby spec/lonelyplanet_spec.rb` to run a series of tests on the retu
  gem ZMZTaiwanTours
  ```
 
-## Try it!
+## Try it yourself!
  Run it from the command line as follow:
 
  ```sh
