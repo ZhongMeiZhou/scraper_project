@@ -3,6 +3,7 @@ require 'open-uri'
 require 'json'
 require './lib/lonelyplanet_scrap'
 # Test class practice for handling errors and checking for HTML structure changes
+# can be used to test functionality before implementing it in Scraper Class
 class LonelyPlanetToursTest < LonelyPlanetScrape::LonelyPlanetTours
   # override super class initialize function
   def initialize
@@ -15,13 +16,14 @@ class LonelyPlanetToursTest < LonelyPlanetScrape::LonelyPlanetTours
 
   private
 
-  # ensure a connection to website before we can parse (remove VCR files time to time or else we will be comparing against cached website copy)
+  # test connection to external site
   def test_parse_html
     parse_html
   rescue OpenURI::HTTPError => e
     puts "HTTP request error: #{e}"
   end
 
+  # test scraping service and also test for changes in structure of elements being traversed
   def test_html_extraction
     result = []
     fail 'OOPS, root article may have been changed or removed' if @document.xpath(TOUR_XPATH_CARD).text.empty?
