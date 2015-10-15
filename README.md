@@ -36,20 +36,22 @@ Please run `ruby spec/lonelyplanet_spec.rb` to run a series of tests on the retu
 
  Install our fantastic gem using the following simple command on your command line:
 
-     $ gem install ZMZTaiwanTours
+ ```sh
+ $ gem install ZMZTaiwanTours
+ ```
 
  either, as our gem is published by Rubygems.org you can also include it in your 'Gemfile' as:
 
-     ```
-     $ gem ZMZTaiwanTours
-     ```
+
+ $ gem ZMZTaiwanTours
+
 
 ## Try it!
  Run it from the command line as follow:
 
-     ```
-     $ ZMZTaiwanTours
-     ```
+ ```sh
+ $ ZMZTaiwanTours
+ ```
 
  or it can also be include it in your own Ruby code with the steps:
 
