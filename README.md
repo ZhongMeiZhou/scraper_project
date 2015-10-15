@@ -53,9 +53,8 @@ Please run `ruby spec/lonelyplanet_spec.rb` to run a series of tests on the retu
 
  or it can also be include it in your own Ruby code with the steps:
 
-     ```
-     require 'ZMZTaiwanTours'
-     taiwan =  LonelyPlanetScrape::LonelyPlanetTours.new
-     tours = taiwan.tours
-     ```
-     
+```ruby
+require 'ZMZTaiwanTours'
+taiwan =  LonelyPlanetScrape::LonelyPlanetTours.new
+tours = taiwan.tours
+```
