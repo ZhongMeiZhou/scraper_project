@@ -1,5 +1,5 @@
 
-# LonelyPlanet Web Scraper Service
+# LonelyPlanet Web Scraper Service [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
 
 The lonelyplanet web scraper service traverses details of Taiwan tour packages
 
