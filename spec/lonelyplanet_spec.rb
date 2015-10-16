@@ -6,7 +6,7 @@ require 'yaml'
 require 'json'
 require 'vcr'
 require 'webmock/minitest'
-require './lib/lonelyplanet_scrap'
+require './lib/taiwan_tours/lonelyplanet_scrap'
 require './spec/support/vcr_setup'
 
 tours_from_file = YAML.load(File.read('./spec/tours.yml'))
