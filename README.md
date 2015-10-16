@@ -1,4 +1,4 @@
-# ZMZTaiwanTours [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
+# taiwan_tours [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
 
  The lonelyplanet web scraper service traverses details of Taiwan tour packages in a easiest way and with simple steps.
 
@@ -10,26 +10,26 @@
  Install our fantastic gem using the following simple command on your command line:
 
  ```sh
- $ gem install ZMZTaiwanTours
+ $ gem install taiwan_tours
  ```
 
  either, as our gem is published by Rubygems.org you can also include it in your 'Gemfile' as:
 
  ```ruby
- gem ZMZTaiwanTours
+ gem taiwan_tours
  ```
 
 ## Try it yourself!
  Run it from the command line as follow:
 
  ```sh
- $ ZMZTaiwanTours
+ $ taiwan_tours
  ```
 
  or it can also be include it in your own Ruby code with the steps:
 
 ```ruby
-require 'ZMZTaiwanTours'
+require 'taiwan_tours'
 taiwan =  LonelyPlanetScrape::LonelyPlanetTours.new
 tours = taiwan.tours
 ```
