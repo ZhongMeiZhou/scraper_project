@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'json'
-require './lib/lonelyplanet_scrap'
+require './lib/zmz_best_of_taiwan/lonelyplanet_scrap'
 
 begin
   taiwan_tours = LonelyPlanetScrape::LonelyPlanetTours.new
