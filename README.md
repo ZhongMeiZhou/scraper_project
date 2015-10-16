@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/taiwan_tours.svg)](https://badge.fury.io/rb/taiwan_tours)
+
 # taiwan_tours [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
 
  The lonelyplanet web scraper service traverses details of Taiwan tour packages in a easiest way and with simple steps.
