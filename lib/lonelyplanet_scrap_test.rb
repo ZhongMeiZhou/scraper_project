@@ -1,7 +1,7 @@
 require 'oga'
 require 'open-uri'
 require 'json'
-require './lib/lonelyplanet_scrap'
+require './lib/taiwan_tours/lonelyplanet_scrap'
 # Test class practice for handling errors and checking for HTML structure changes
 # can be used to test functionality before implementing it in Scraper Class
 class LonelyPlanetToursTest < LonelyPlanetScrape::LonelyPlanetTours
