@@ -1,5 +1,5 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'zmz_best_of_taiwan/version'
+require 'taiwan_tours/version'
 
 Gem::Specification.new do |s|
   s.name        =  'taiwan_tours'

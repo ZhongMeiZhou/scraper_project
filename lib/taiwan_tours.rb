@@ -1,2 +1,2 @@
-require 'zmz_best_of_taiwan/lonelyplanet_scrap.rb'
-require 'zmz_best_of_taiwan/version.rb'
+require 'taiwan_tours/lonelyplanet_scrap.rb'
+require 'taiwan_tours/version.rb'
