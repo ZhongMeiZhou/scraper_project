@@ -5,8 +5,6 @@ require 'json'
 # Module defines LonelyPlanetTours class which handles scraping of lonelyplanet Taiwan tours page
 module LonelyPlanetScrape
   class LonelyPlanetTours
-    # Define constants needed for scraping
-    # Please if the test for uri fails replace contant manually
     LONELYPLANET_URL = 'http://www.lonelyplanet.com'
     TOUR_RELATIVE_DIR = 'taiwan/tours'
 
