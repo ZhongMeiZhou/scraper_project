@@ -1,27 +1,40 @@
 
-# LonelyPlanet Web Scraper Service [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
 
-The lonelyplanet web scraper service traverses details of Taiwan tour packages
+# taiwan_tours [![Gem Version](https://badge.fury.io/rb/taiwan_tours.svg)](https://badge.fury.io/rb/taiwan_tours) [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
 
-## Installation
+ The web scraper service we built provides listings of Taiwan tour packages from Lonelyplanet. We have bundled this service into the taiwan_tours gem for you to use.
 
-Execute the command below to install all dependencies:
+ Note that we respect Lonelyplanet's 'robots.txt' file.
 
-    $ bundle
 
-Or install the gems yourself listed in the Gemfile:
+## Usage
 
-    $ gem install oga
-    $ gem install json
-    $ gem install minitest
+ Install at the command line:
 
-## Service usage
+ ```sh
+ $ gem install taiwan_tours
+ ```
 
-Please run `bin/taiwan_tours` for you to explore tour packages
+ or include it in your 'Gemfile' as:
 
-## Testing
+ ```ruby
+ gem taiwan_tours
+ ```
 
-Please run `ruby spec/lonelyplanet_spec.rb` to run a series of tests on the returned results
+## Try it yourself!
+ Run it from the command line as:
+
+ ```sh
+ $ taiwan_tours
+ ```
+
+ or include it in your code:
+
+```ruby
+require 'taiwan_tours'
+taiwan =  LonelyPlanetScrape::LonelyPlanetTours.new
+tours = taiwan.tours
+```
 
 ## Want to make improvements?
 
