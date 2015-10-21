@@ -12,7 +12,7 @@ require './spec/support/vcr_setup'
 tours_from_file = YAML.load(File.read('./spec/tours.yml'))
 
 VCR.use_cassette('taiwan_tours') do
-  obj = LonelyPlanetScrape::LonelyPlanetTours.new
+  obj = LonelyPlanetScrape::LonelyPlanetTours.new('taiwan')
   tours_found = JSON.parse(obj.tours) if !obj.tours.nil?
 
   describe 'Check for difference between returned results and actual data and possibly HTML structure changes' do
