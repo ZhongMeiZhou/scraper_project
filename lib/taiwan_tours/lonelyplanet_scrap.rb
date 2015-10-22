@@ -6,7 +6,7 @@ require 'json'
 module LonelyPlanetScrape
   class LonelyPlanetTours
     LONELYPLANET_URL = 'http://www.lonelyplanet.com'
-    TOUR_RELATIVE_DIR = 'taiwan/tours'
+    TOUR_RELATIVE_DIR = 'tours'
 
     TOUR_XPATH_CARD = "//article[contains(@class,'card')]"
     CARD_IMGLINK_XPATH = ".//img[contains(@class,'card__figure__img')]/@src"
@@ -17,8 +17,8 @@ module LonelyPlanetScrape
     CARD_PRICE_CURRENCY_XPATH = ".//span[contains(@class,'js-currency')]"
     CARD_PRICE_AMOUNT_XPATH = ".//span[contains(@class,'js-price')]"
 
-    def initialize
-      parse_html
+    def initialize(country)
+      parse_html(country)
     end
 
     def tours
@@ -27,8 +27,8 @@ module LonelyPlanetScrape
 
     private
 
-    def parse_html
-      url = "#{LONELYPLANET_URL}/#{TOUR_RELATIVE_DIR}"
+    def parse_html(country)
+      url = "#{LONELYPLANET_URL}/#{country}/#{TOUR_RELATIVE_DIR}"
       @document = Oga.parse_html(open(url))
     end
 
