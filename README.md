@@ -25,15 +25,15 @@
  Run it from the command line as:
 
  ```sh
- $ lonely_planet_tours
+ $ lonely_planet_tours 'country name'
  ```
 
  or include it in your code:
 
 ```ruby
 require 'lonely_planet_tours'
-taiwan =  LonelyPlanetScrape::LonelyPlanetTours.new(country)
-tours = taiwan.tours
+country =  LonelyPlanetScrape::LonelyPlanetTours.new(country)
+tours = country.tours
 ```
 
 ## Want to make improvements?
