@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'json'
-require './lib/lonely_planet/lonelyplanet_scrap.rb'
+# For Test 
+#require '../lib/lonely_planet/lonelyplanet_scrap.rb' 
 
 begin
   fail ArgumentError, "usage: tours [country]\n" if ARGV.count == 0
