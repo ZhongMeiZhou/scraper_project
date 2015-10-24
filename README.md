@@ -1,6 +1,6 @@
 
 
-# lonely_planet_tours [![Gem Version](https://badge.fury.io/rb/taiwan_tours.svg)](https://badge.fury.io/rb/taiwan_tours) [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
+# lonely_planet_tours [![Gem Version](https://badge.fury.io/rb/lonely_planet_tours.svg)](https://badge.fury.io/rb/taiwan_tours) [![Build Status](https://travis-ci.org/ZhongMeiZhou/scraper_project.svg)](https://travis-ci.org/ZhongMeiZhou/scraper_project)
 
  The web scraper service we built provides listings of tour packages from Lonelyplanet based on a specified country. We have bundled this service into the lonely_planet_tours gem for you to use.
 
