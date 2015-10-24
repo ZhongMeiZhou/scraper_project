@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'json'
-require 'taiwan_tours/lonelyplanet_scrap'
+require './lib/lonely_planet/lonelyplanet_scrap'
 
 begin
   fail ArgumentError, "usage: tours [country]\n" if ARGV.count == 0
