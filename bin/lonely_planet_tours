@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 require 'json'
+# For Production
+require 'lonely_planet_tours'
 # For Test 
 #require '../lib/lonely_planet/lonelyplanet_scrap.rb' 
 
