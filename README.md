@@ -18,14 +18,14 @@
  or include it in your 'Gemfile' as:
 
  ```ruby
- gem lonely_planet_tours
+ gem 'lonely_planet_tours'
  ```
 
 ## Try it yourself!
  Run it from the command line as:
 
  ```sh
- $ lonely_planet_tours 'country name'
+ $ lonely_planet_tours country_name
  ```
 
  or include it in your code:
