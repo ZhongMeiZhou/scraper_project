@@ -36,12 +36,12 @@ module LonelyPlanetScrape
       result = []
       @document.xpath(TOUR_XPATH_CARD).map do |card|
         element = {}
-        element['img'] = card.xpath(CARD_IMGLINK_XPATH).text
+        element['img'] = card.xpath(CARD_IMGLINK_XPATH).text.strip
         element['title'] = card.xpath(CARD_TITLE_XPATH).text.strip
         element['content'] = card.xpath(CARD_CONTENT_XPATH).text.strip
-        element['location'] = card.xpath(CARD_LOCATION_XPATH).text
-        element['price_currency'] = card.xpath(CARD_PRICE_CURRENCY_XPATH).text
-        element['price'] = card.xpath(CARD_PRICE_AMOUNT_XPATH).text
+        element['location'] = card.xpath(CARD_LOCATION_XPATH).text.strip
+        element['price_currency'] = card.xpath(CARD_PRICE_CURRENCY_XPATH).text.strip
+        element['price'] = card.xpath(CARD_PRICE_AMOUNT_XPATH).text.strip.to_f
         result << element
       end
       result.to_json
