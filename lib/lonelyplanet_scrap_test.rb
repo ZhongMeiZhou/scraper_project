@@ -1,13 +1,13 @@
 require 'oga'
 require 'open-uri'
 require 'json'
-require './lib/taiwan_tours/lonelyplanet_scrap'
+require './lib/lonely_planet/lonelyplanet_scrap'
 # Test class practice for handling errors and checking for HTML structure changes
 # can be used to test functionality before implementing it in Scraper Class
 class LonelyPlanetToursTest < LonelyPlanetScrape::LonelyPlanetTours
   # override super class initialize function
-  def initialize
-    test_parse_html
+  def initialize(country)
+    test_parse_html(country)
   end
 
   def test_tour
@@ -17,8 +17,8 @@ class LonelyPlanetToursTest < LonelyPlanetScrape::LonelyPlanetTours
   private
 
   # test connection to external site
-  def test_parse_html
-    parse_html
+  def test_parse_html(country)
+    parse_html(country)
   rescue OpenURI::HTTPError => e
     puts "HTTP request error: #{e}"
   end
@@ -48,5 +48,5 @@ class LonelyPlanetToursTest < LonelyPlanetScrape::LonelyPlanetTours
   end
 end
 
-test_run = LonelyPlanetToursTest.new
+test_run = LonelyPlanetToursTest.new('belize')
 puts test_run.test_tour

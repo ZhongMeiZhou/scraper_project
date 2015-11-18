@@ -1,13 +1,13 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'taiwan_tours/version'
+require 'lonely_planet/version'
 
 Gem::Specification.new do |s|
-  s.name        =  'taiwan_tours'
+  s.name        =  'lonely_planet_tours'
   s.version     =  LonelyPlanetScrape::VERSION
   s.date        =  LonelyPlanetScrape::DATE
-  s.executables << 'taiwan_tours'
-  s.summary     =  'The lonelyplanet web scraper service traverses details of Taiwan tour packages'
-  s.description =  'Get listings of taiwan tour packages from Lonelyplanet'
+  s.executables << 'lonely_planet_tours'
+  s.summary     =  'The lonelyplanet web scraper service traverses details of tour packages based on specified country'
+  s.description =  'Get listings of tour packages from Lonelyplanet'
   s.authors     =  ['Bayardo Salgado', 'Cesar Ordoñez','Eduardo Salazar','Nicole Weatherburne']
   s.email       =  ['bayardo_salgado@yahoo.com','cesar','esalazar922@gmail.com','nikkiweat@gmail.com']
   s.files       =  `git ls-files`.split("\n")

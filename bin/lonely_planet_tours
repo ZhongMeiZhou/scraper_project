@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+require 'json'
+# For Production
+require 'lonely_planet_tours'
+# For Test 
+#require '../lib/lonely_planet/lonelyplanet_scrap.rb' 
+
+begin
+  fail ArgumentError, "usage: tours [country]\n" if ARGV.count == 0
+  country = ARGV[0]
+
+  taiwan_tours = LonelyPlanetScrape::LonelyPlanetTours.new(country)
+  tour_arr = JSON.parse(taiwan_tours.tours)
+  puts "According to LonelyPlanet, these are the best tour packages in #{country}:"
+
+  tour_arr.each do |hash|
+    puts "- #{hash['title']} for $#{hash['price']}"
+  end
+
+rescue => e
+  puts "Error occured - see details: #{e}"
+end
