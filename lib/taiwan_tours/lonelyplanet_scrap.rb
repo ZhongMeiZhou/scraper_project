@@ -15,13 +15,15 @@ module LonelyPlanetScrape
     CARD_LOCATION_XPATH = ".//div[contains(@class,'card__footer__locale')]"
     CARD_PRICE_CURRENCY_XPATH = ".//span[contains(@class,'js-currency')]"
     CARD_PRICE_AMOUNT_XPATH = ".//span[contains(@class,'js-price')]"
+    CARD_CATEGORY_XPATH = ".//span[contains(@class,'card__content__context')]"
     MAP_VALUES = {
       "img" => CARD_IMGLINK_XPATH,
       "title" => CARD_TITLE_XPATH,
       "content" => CARD_CONTENT_XPATH,
       "location" => CARD_LOCATION_XPATH,
       "price_currency" => CARD_PRICE_CURRENCY_XPATH,
-      "price" => CARD_PRICE_AMOUNT_XPATH
+      "price" => CARD_PRICE_AMOUNT_XPATH,
+      "category" => CARD_CATEGORY_XPATH
     }
 
 
