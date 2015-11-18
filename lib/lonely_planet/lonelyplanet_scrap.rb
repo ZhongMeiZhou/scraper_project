@@ -28,13 +28,13 @@ module LonelyPlanetScrape
     }
 
 
-    def initialize
+    def initialize(country)
+      @country = country
       parse_html
     end
 
-    def tours(country,total_elements = 1)
+    def tours(total_elements = 1)
       @total_elements = total_elements
-      @country = country
       @tours ||= extract_tours
     end
 

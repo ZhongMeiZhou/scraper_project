@@ -6,13 +6,12 @@ require 'yaml'
 require 'json'
 require 'vcr'
 require 'webmock/minitest'
-require './lib/taiwan_tours/lonelyplanet_scrap'
+require './lib/lonely_planet/lonelyplanet_scrap'
 require './spec/support/vcr_setup'
 
-
 VCR.use_cassette('taiwan_tours_json') do
-  obj = LonelyPlanetScrape::LonelyPlanetTours.new
-  tours_found = JSON.parse(obj.tours('taiwan')) if !obj.tours('taiwan').nil?
+  obj = LonelyPlanetScrape::LonelyPlanetTours.new('taiwan')
+  tours_found = JSON.parse(obj.tours) if !obj.tours.nil?
 
   describe 'Validate structure of result' do
 
