@@ -53,6 +53,11 @@ VCR.use_cassette('taiwan_tours_json') do
       refute_empty tours_found[index]['price'] , "Expect Price not empty value for Object #{index}"
     end
 
+    it 'check if category exist and is not empty' do
+      refute_nil tours_found[index]['category'] , "Expect Price not nil value for Object #{index}"
+      refute_empty tours_found[index]['category'] , "Expect Price not empty value for Object #{index}"
+    end
+
    end  
   end
 end
