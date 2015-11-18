@@ -45,7 +45,7 @@ module LonelyPlanetScrape
       result = []
       @document.xpath(TOUR_XPATH_CARD).map do |card|
         element = {}
-        MAP_VALUES.each { |k, v| element[k] = card.xpath(v).text.strip }
+        MAP_VALUES.each { |k, v| element[k] = nil }
         result << element
       end
       result.to_json

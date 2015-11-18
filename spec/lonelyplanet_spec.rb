@@ -22,16 +22,17 @@ VCR.use_cassette('taiwan_tours') do
     end
 
     0.upto(tours_from_file.length - 1) do |index|
-    it 'check for price changes' do
-      refute_empty tours_found[index]['price'], "Expect Price value for Object #{index}"
+    it 'check if price exist and is not empty' do
+      refute_empty tours_found[index]['price'] , "Expect Price not empty value for Object #{index}"
+      refute_nil tours_found[index]['price'] , "Expect Price not nil value for Object #{index}"
     end
 
     it 'check for title changes' do
-      refute_empty tours_found[index]['title'], "Expect Tittle value for Object #{index}"
+      refute_empty tours_found[index]['title'], "Expect Tittle not empty value for Object #{index}"
     end
 
     it 'check for description changes' do
-      refute_empty tours_found[index]['content'], "Expect description value for Object #{index}"
+      refute_empty tours_found[index]['content'], "Expect description not value for Object #{index}"
     end
    end  
   end
