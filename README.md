@@ -30,11 +30,30 @@
 
  or include it in your code:
 
+Initialize class
 ```ruby
+require 'taiwan_tours'
 require 'lonely_planet_tours'
 country =  LonelyPlanetScrape::LonelyPlanetTours.new(country)
+```
+
+## Use:
+
+Get tours elements
+```ruby
 tours = country.tours
 ```
+
+```
+
+OR
+
+Get tours with specific total elements number. total_elements is optional
+
+```ruby
+tours = country.tours(total_elements)
+```
+
 
 ## Want to make improvements?
 
