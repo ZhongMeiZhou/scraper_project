@@ -12,14 +12,10 @@ require './spec/support/vcr_setup'
 tours_from_file = YAML.load(File.read('./spec/tours.yml'))
 
 VCR.use_cassette('taiwan_tours_json') do
-  obj = LonelyPlanetScrape::LonelyPlanetTours.new('Taiwan')
-  tours_found = JSON.parse(obj.tours) if !obj.tours.nil?
+  obj = LonelyPlanetScrape::LonelyPlanetTours.new
+  tours_found = JSON.parse(obj.tours('taiwan')) if !obj.tours('taiwan').nil?
 
   describe 'Validate structure of result' do
-
-    it 'check if the number of taiwan tours has changed' do
-      tours_found.size.must_equal tours_from_file.size
-    end
 
     0.upto(tours_from_file.length - 1) do |index|
     
@@ -54,8 +50,8 @@ VCR.use_cassette('taiwan_tours_json') do
     end
 
     it 'check if category exist and is not empty' do
-      refute_nil tours_found[index]['category'] , "Expect Price not nil value for Object #{index}"
-      refute_empty tours_found[index]['category'] , "Expect Price not empty value for Object #{index}"
+      refute_nil tours_found[index]['category'] , "Expect Category not nil value for Object #{index}"
+      refute_empty tours_found[index]['category'] , "Expect Category not empty value for Object #{index}"
     end
 
    end  
