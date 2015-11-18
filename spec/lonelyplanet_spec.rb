@@ -9,7 +9,6 @@ require 'webmock/minitest'
 require './lib/taiwan_tours/lonelyplanet_scrap'
 require './spec/support/vcr_setup'
 
-tours_from_file = YAML.load(File.read('./spec/tours.yml'))
 
 VCR.use_cassette('taiwan_tours_json') do
   obj = LonelyPlanetScrape::LonelyPlanetTours.new
@@ -17,7 +16,7 @@ VCR.use_cassette('taiwan_tours_json') do
 
   describe 'Validate structure of result' do
 
-    0.upto(tours_from_file.length - 1) do |index|
+    0.upto(tours_found.length - 1) do |index|
     
 
     it 'check if title exist and is not empty' do
