@@ -16,6 +16,15 @@ module LonelyPlanetScrape
     CARD_LOCATION_XPATH = ".//div[contains(@class,'card__footer__locale')]"
     CARD_PRICE_CURRENCY_XPATH = ".//span[contains(@class,'js-currency')]"
     CARD_PRICE_AMOUNT_XPATH = ".//span[contains(@class,'js-price')]"
+    MAP_VALUES = {
+      "img" => CARD_IMGLINK_XPATH,
+      "title" => CARD_TITLE_XPATH,
+      "content" => CARD_CONTENT_XPATH,
+      "location" => CARD_LOCATION_XPATH,
+      "price_currency" => CARD_PRICE_CURRENCY_XPATH,
+      "price" => CARD_PRICE_AMOUNT_XPATH
+    }
+
 
     def initialize
       parse_html
@@ -36,15 +45,11 @@ module LonelyPlanetScrape
       result = []
       @document.xpath(TOUR_XPATH_CARD).map do |card|
         element = {}
-        element['img'] = card.xpath(CARD_IMGLINK_XPATH).text
-        element['title'] = card.xpath(CARD_TITLE_XPATH).text.strip
-        element['content'] = card.xpath(CARD_CONTENT_XPATH).text.strip
-        element['location'] = card.xpath(CARD_LOCATION_XPATH).text
-        element['price_currency'] = card.xpath(CARD_PRICE_CURRENCY_XPATH).text
-        element['price'] = card.xpath(CARD_PRICE_AMOUNT_XPATH).text
+        MAP_VALUES.each { |k, v| element[k] = card.xpath(v).text.strip }
         result << element
       end
       result.to_json
     end
+
   end
 end
