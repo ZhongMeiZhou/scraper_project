@@ -22,10 +22,7 @@ VCR.use_cassette('taiwan_tours_json') do
     end
 
     0.upto(tours_from_file.length - 1) do |index|
-    it 'check if price exist and is not empty' do
-      refute_nil tours_found[index]['price'] , "Expect Price not nil value for Object #{index}"
-      refute_empty tours_found[index]['price'] , "Expect Price not empty value for Object #{index}"
-    end
+    
 
     it 'check if title exist and is not empty' do
       
@@ -44,6 +41,18 @@ VCR.use_cassette('taiwan_tours_json') do
       refute_nil tours_found[index]['location'], "Expect location not nil for Object #{index}"
       refute_empty tours_found[index]['location'], "Expect location not value for Object #{index}"
     end
+
+    it 'check if price_currency exist and is not empty' do
+      
+      refute_nil tours_found[index]['price_currency'], "Expect price_currency not nil for Object #{index}"
+      refute_empty tours_found[index]['price_currency'], "Expect price_currency not value for Object #{index}"
+    end
+
+    it 'check if price exist and is not empty' do
+      refute_nil tours_found[index]['price'] , "Expect Price not nil value for Object #{index}"
+      refute_empty tours_found[index]['price'] , "Expect Price not empty value for Object #{index}"
+    end
+
    end  
   end
 end
