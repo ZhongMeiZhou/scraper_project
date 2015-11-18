@@ -27,11 +27,11 @@ VCR.use_cassette('taiwan_tours') do
     end
 
     it 'check for title changes' do
-      tours_found[index]['title']
+      refute_empty tours_found[index]['title'], "Expect Tittle value for Object #{index}"
     end
 
     it 'check for description changes' do
-      tours_found[index]['content']
+      refute_empty tours_found[index]['content'], "Expect description value for Object #{index}"
     end
    end  
   end
