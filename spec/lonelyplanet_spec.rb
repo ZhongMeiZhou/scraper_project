@@ -11,8 +11,8 @@ require './spec/support/vcr_setup'
 
 tours_from_file = YAML.load(File.read('./spec/tours.yml'))
 
-VCR.use_cassette('taiwan_tours') do
-  obj = LonelyPlanetScrape::LonelyPlanetTours.new
+VCR.use_cassette('taiwan_tours_json') do
+  obj = LonelyPlanetScrape::LonelyPlanetTours.new('Taiwan')
   tours_found = JSON.parse(obj.tours) if !obj.tours.nil?
 
   describe 'Validate structure of result' do
@@ -23,7 +23,6 @@ VCR.use_cassette('taiwan_tours') do
 
     0.upto(tours_from_file.length - 1) do |index|
     it 'check if price exist and is not empty' do
-      
       refute_nil tours_found[index]['price'] , "Expect Price not nil value for Object #{index}"
       refute_empty tours_found[index]['price'] , "Expect Price not empty value for Object #{index}"
     end
@@ -38,6 +37,12 @@ VCR.use_cassette('taiwan_tours') do
       
       refute_nil tours_found[index]['content'], "Expect description not nil for Object #{index}"
       refute_empty tours_found[index]['content'], "Expect description not value for Object #{index}"
+    end
+
+    it 'check if location exist and is not empty' do
+      
+      refute_nil tours_found[index]['location'], "Expect location not nil for Object #{index}"
+      refute_empty tours_found[index]['location'], "Expect location not value for Object #{index}"
     end
    end  
   end
