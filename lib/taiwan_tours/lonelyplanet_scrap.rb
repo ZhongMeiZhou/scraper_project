@@ -1,12 +1,11 @@
 require 'oga'
 require 'open-uri'
-require 'json'
 
 # Module defines LonelyPlanetTours class which handles scraping of lonelyplanet Taiwan tours page
 module LonelyPlanetScrape
   class LonelyPlanetTours
     LONELYPLANET_URL = 'http://www.lonelyplanet.com'
-    TOUR_RELATIVE_DIR = 'taiwan/tours'
+    TOUR_RELATIVE_DIR = 'tours.json'
 
     TOUR_XPATH_CARD = "//article[contains(@class,'card')]"
     CARD_IMGLINK_XPATH = ".//img[contains(@class,'card__figure__img')]/@src"
@@ -30,25 +29,36 @@ module LonelyPlanetScrape
       parse_html
     end
 
-    def tours
+    def tours(country,total_elements = 1)
+      @total_elements = total_elements
+      @country = country
       @tours ||= extract_tours
     end
 
     private
 
     def parse_html
-      url = "#{LONELYPLANET_URL}/#{TOUR_RELATIVE_DIR}"
+      url = "#{LONELYPLANET_URL}/#{@country}/#{TOUR_RELATIVE_DIR}"
       @document = Oga.parse_html(open(url))
     end
 
+    # Return how many pages it has to check
+    def total_pages
+      page_elements = @document.xpath(TOUR_XPATH_CARD).size 
+      total = (@total_elements/page_elements.to_f).ceil
+    end
+
+
     def extract_tours
       result = []
-      @document.xpath(TOUR_XPATH_CARD).map do |card|
-        element = {}
-        MAP_VALUES.each { |k, v| element[k] = nil }
-        result << element
+      (1..total_pages).each do |page|
+        @document.xpath(TOUR_XPATH_CARD+"?page=#{page}").map do |card|
+          element = {}
+          MAP_VALUES.each { |k, v| element[k] = card.xpath(v).text.strip }
+          result << element
+        end
       end
-      result.to_json
+      result
     end
 
   end
