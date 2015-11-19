@@ -1,5 +1,5 @@
 # Versioning
 module LonelyPlanetScrape
-  VERSION = '1.0.3'
-  DATE = '2015-10-24'
+  VERSION = '1.1.0'
+  DATE = '2015-11-18'
 end
